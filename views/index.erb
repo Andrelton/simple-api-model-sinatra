@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Soccer Leagues</title>
+  </head>
+  <body>
+    <h1>Index page.</h1>
+    <ul>
+      <% @leagues.each do |league| %>
+        <li>
+          <a href="/leagues/<%= league.league_id %>">
+            <%= league.league_name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+    <!-- <script src="js/scripts.js"></script> -->
+  </body>
+</html>
